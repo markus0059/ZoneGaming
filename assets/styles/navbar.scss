@@ -1,0 +1,26 @@
+.nav {
+  height: 60px;
+  background-color: black;
+  align-items: center;
+}
+
+
+
+.nav a{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+}
+
+.nav h2 {
+  color: $yellow-color;
+  font-size: 20px;
+  margin: 0;
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 1px;
+}
+
+.logo img {
+  height: 50px;
+}
