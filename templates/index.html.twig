@@ -1,7 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Zone Gaming{% endblock %}
+{% block title %}Zone Gaming
+{% endblock %}
 
 {% block body %}
-<h1 class="text-center">Bienvenue !</h1>
+	<main>
+		<section class="welcome">
+			<h1 class="text-center title">Bienvenue dans l'Univers des Gamers !</h1>
+			<img src="{{ asset('build/images/logo.png') }}" alt="">
+		</section>
+	</main>
 {% endblock %}

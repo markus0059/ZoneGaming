@@ -2,11 +2,11 @@
   height: 60px;
   background-color: black;
   align-items: center;
+  display: flex;
+  justify-content: space-between;
 }
 
-
-
-.nav a{
+.nav a {
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -18,9 +18,37 @@
   font-size: 20px;
   margin: 0;
   font-family: 'Anton', sans-serif;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 .logo img {
-  height: 50px;
+  height: 40px;
+}
+
+.navbar-links {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin-bottom: 0;
+  margin-right: 32px;
+  font-family: 'Anton', sans-serif;
+}
+
+.navbar-link {
+  color: $yellow-color;
+  margin: 0 10px 0 10px;
+
+  &:hover{
+    color: $red-color;
+  }
+}
+
+.login a{
+  font-family: 'Anton', sans-serif;
+  margin-right: 32px;
+  color: $yellow-color;
+
+  &:hover{
+    color: $red-color;
+  }
 }

@@ -1,21 +1,36 @@
 $yellow-color: #ffcc00;
+$red-color: #960000;
 
 @import "~bootstrap/scss/bootstrap";
 @import "navbar.scss";
+@import "home.scss";
+
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
 
 body {
     background-color: $yellow-color;
     margin: 0;
     padding: 0;
-    height: 100vh;
     cursor: none;
-    overflow: hidden;
+    height: 100vh;
+    font-family: 'Anton', sans-serif;
+    color: black;
+    // overflow: hidden;
+}
+
+.sf-toolbar {
+  cursor: none;
 }
 
 .cursor {
   width: 35px;
   height: 35px;
   position: absolute;
+  pointer-events: none;
   animation: Anim1 1s infinite alternate;
 }
 
@@ -49,4 +64,8 @@ body {
     transform: scale(1);
     opacity: 0;
   }
+}
+
+a:hover{
+  cursor: none;
 }
