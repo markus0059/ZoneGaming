@@ -9,3 +9,64 @@
   margin-top: 30px;
   margin-bottom: 30px;
 }
+
+.home-index {
+  color: $yellow-color;
+  background-color: black;
+}
+
+.btn-home {
+  margin: auto;
+  display: flex;
+  height: 40px;
+  width: 15%;
+  background-color: $yellow-color;
+  margin-top: 5%;
+  align-items: center;
+  border-radius: 8px;
+  animation: Anim3 1.5s infinite alternate;
+  // pointer-events: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border: solid 1px white;
+
+  &:hover {
+    color: $yellow-color;
+    animation: none;
+    transition: 0.4s;
+    transform: scale(1.4);
+    background-color: black;
+    border: solid 1px $yellow-color;
+  }
+}
+
+.btn-home p {
+  margin: auto;
+  background: transparent;
+  width: 111%;
+  height: 99%;
+  border: 2px solid black;
+  border-radius: 8px;
+  font-size: 24px;
+}
+
+@keyframes Anim3 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+// @media only screen and (max-width: 668px) {
+//   .home-presentation {
+//     margin: 50% 0;
+//   }
+// }
+
+.home-page {
+  margin: auto;
+}

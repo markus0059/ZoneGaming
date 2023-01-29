@@ -5,9 +5,19 @@
 
 {% block body %}
 	<main>
-		<section class="welcome">
-			<h1 class="text-center title">Bienvenue dans l'Univers des Gamers !</h1>
-			<img src="{{ asset('build/images/logo.png') }}" alt="">
-		</section>
+		<div class="home-page">
+
+			<section class="welcome">
+				<h1 class="text-center title">Bienvenue dans l'Univers des Gamers !</h1>
+				<img src="{{ asset('build/images/logo.png') }}" alt="">
+			</section>
+
+
+			<a class="btn-home" href="/universe">
+				<p>Entrer</p>
+			</a>
+		</div>
+
+
 	</main>
 {% endblock %}

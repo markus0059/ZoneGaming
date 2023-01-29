@@ -20,13 +20,18 @@
 			{{ encore_entry_script_tags('app') }}
 		{% endblock %}
 	</head>
+
 	<header>
 		{% include "_navbar.html.twig" %}
 	</header>
+
 	<body>
-    <div class="cursor">
-      <img src="{{ asset('build/images/cursorRed.png') }}" alt="">
-    </div>
+		<div class="cursor">
+			<img src="{{ asset('build/images/cursorRed.png') }}" alt="cible">
+		</div>
 		{% block body %}{% endblock %}
 	</body>
+
+	{% include "_footer.html.twig" %}
+
 </html>

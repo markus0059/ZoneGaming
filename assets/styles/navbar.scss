@@ -17,10 +17,14 @@
   color: $yellow-color;
   font-size: 20px;
   margin: 0;
-  font-family: 'Anton', sans-serif;
+  font-family: "Anton", sans-serif;
   letter-spacing: 2px;
 }
 
+.logo :hover {
+  transition: 0.4s;
+  transform: scale(1.1);
+}
 .logo img {
   height: 40px;
 }
@@ -31,24 +35,32 @@
   list-style: none;
   margin-bottom: 0;
   margin-right: 32px;
-  font-family: 'Anton', sans-serif;
+  font-family: "Anton", sans-serif;
 }
 
 .navbar-link {
   color: $yellow-color;
   margin: 0 10px 0 10px;
 
-  &:hover{
+  &:hover {
+    color: $red-color;
+    transition: 0.4s;
+    transform: scale(1.5);
+  }
+}
+
+.login a {
+  font-family: "Anton", sans-serif;
+  margin-right: 32px;
+  color: $yellow-color;
+
+  &:hover {
     color: $red-color;
   }
 }
 
-.login a{
-  font-family: 'Anton', sans-serif;
-  margin-right: 32px;
-  color: $yellow-color;
-
-  &:hover{
-    color: $red-color;
-  }
+.bar-limit {
+  height: 1px;
+  width: 100%;
+  background-color: $yellow-color;
 }

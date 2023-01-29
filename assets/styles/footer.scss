@@ -1,0 +1,21 @@
+footer {
+  display: flex;
+  height: 50px;
+  align-items: center;
+}
+
+.footer-links{
+  display: flex;
+}
+
+.footer-link{
+  margin-left: 24px;
+  text-decoration: none;
+  color: $yellow-color;
+
+  &:hover{
+    color: $red-color;
+    transition: 0.4s;
+    transform: scale(1.5);
+  }
+}

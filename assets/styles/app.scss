@@ -4,6 +4,8 @@ $red-color: #960000;
 @import "~bootstrap/scss/bootstrap";
 @import "navbar.scss";
 @import "home.scss";
+@import "footer.scss";
+
 
 *{
   margin: 0;
@@ -11,14 +13,18 @@ $red-color: #960000;
   border: 0;
 }
 
+main {
+  min-height: calc(100vh - 140px);
+}
+
 body {
-    background-color: $yellow-color;
+    background-color: black;
     margin: 0;
     padding: 0;
     cursor: none;
     height: 100vh;
     font-family: 'Anton', sans-serif;
-    color: black;
+    color: $yellow-color;
     // overflow: hidden;
 }
 
@@ -32,6 +38,7 @@ body {
   position: absolute;
   pointer-events: none;
   animation: Anim1 1s infinite alternate;
+  z-index: 2;
 }
 
 .cursor img {
