@@ -11,19 +11,19 @@ class PlateformeFixtures extends Fixture implements DependentFixtureInterface
 {
   public const PLATEFORMES = [
     [
-      "Nintendo",
+      "Nintendo-old",
       "NintendoLogo_Red.png",
       "backgroundNintendo.png",
       "universe_Retrogaming"
     ],
     [
-      "Playstation",
+      "Playstation-old",
       "PlaystationLogoOld.png",
       "backgroundPlaystation.png",
       "universe_Retrogaming"
     ],
     [
-      "Xbox",
+      "Xbox-old",
       "xboxLogoOld.png",
       "backgroundXbox.png",
       "universe_Retrogaming"
@@ -71,6 +71,7 @@ class PlateformeFixtures extends Fixture implements DependentFixtureInterface
       $plateforme->setBackground($value[2]);
       $plateforme->setUniverse($this->getReference($value[3]));
       $manager->persist($plateforme);
+      $this->addReference('plateforme_' . $value[0], $plateforme);
     }
     $manager->flush();
   }
