@@ -1,5 +1,3 @@
-
-
 {% extends 'base.html.twig' %}
 
 {% block title %}Zone Gaming
@@ -7,6 +5,16 @@
 
 {% block body %}
 	<main>
-		<h1 class="text-center mt-4">Univers {{ id }}</h1>
+		<h1 class="text-center mt-4">Univers
+			{{ universe.name }}</h1>
+
+		<section class="cardPlateformes">
+			{% for plateforme in plateformes %}
+				<div class="cardPlateforme" style="background-image: url(/build/images/{{plateforme.photo}})"></div>
+
+			{% endfor %}
+		</section>
 	</main>
+
+
 {% endblock %}

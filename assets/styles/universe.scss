@@ -1,7 +1,13 @@
+// page index
 .cardUniverses {
   display: grid;
   grid-template-columns: 2fr 2fr;
   gap: 15px;
+  margin-bottom: 70px;
+}
+
+.cardUniverses a {
+  text-decoration: none;
 }
 
 .cardUniverse {
@@ -12,9 +18,23 @@
   border-radius: 8px;
   align-items: center;
   margin: 2vw;
+
+
+  &:hover{
+
+    transition: 0.5s;
+    transform: scale(0.9);
+
+    .cardUniverseName h2 {
+
+      color: $red-color;
+
+    }
+
+  }
 }
 
-.cardUniverseName{
+.cardUniverseName {
   background-color: rgba(240, 248, 255, 0.534);
   text-align: center;
   margin: auto;
@@ -26,11 +46,50 @@
 }
 
 .cardUniverseName h2 {
+
   margin: 0;
   color: black;
+  text-decoration: none;
+}
+
+.SloganUniverse {
+  width: 80vw;
+  margin: auto;
+  text-align: center;
+  // Anim3 in home.scss
+  animation: Anim3 1.5s infinite alternate;
+}
+
+
+
+// page show
+.cardPlateformes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+.cardPlateforme {
+  height: 15vw;
+  display: flex;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  border-radius: 8px;
+  align-items: center;
+  margin: 2vw;
+  border: 1px solid white;
+
+  &:hover{
+    transition: 0.5s;
+    transform: scale(0.9);
+  }
 }
 
 @media only screen and (max-width: 668px) {
+
+  // page index
   .cardUniverses {
     display: grid;
     grid-template-columns: 2fr;

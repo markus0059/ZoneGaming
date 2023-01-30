@@ -14,7 +14,7 @@ class UniverseFixtures extends Fixture
       "retrogaming.jpg"
     ],
     [
-      "New Generation",
+      "NewGeneration",
       "newGeneration.jpg"
     ]
 
@@ -29,6 +29,7 @@ class UniverseFixtures extends Fixture
       $universe->setName($value[0]);
       $universe->setPhoto($value[1]);
       $manager->persist($universe);
+      $this->addReference('universe_' . $value[0], $universe);
     }
 
     $manager->flush();

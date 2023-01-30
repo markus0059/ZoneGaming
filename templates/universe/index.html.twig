@@ -9,12 +9,14 @@
 
 		<section class="cardUniverses">
 			{% for universe in universes %}
-       <div class="cardUniverse" style= "background-image: url(/build/images/{{universe.photo}})">
+       <a href="/universe/{{universe.name}}" class="cardUniverse" style= "background-image: url(/build/images/{{universe.photo}})">
 				<div class="cardUniverseName">
            <h2>{{universe.name}}</h2>
         </div>
-       </div>
+       </a>
 			{% endfor %}
 		</section>
+
+    <h2 class="text-center mt-4 SloganUniverse">Choisies ton Univers préféré !!!</h2>
 	</main>
 {% endblock %}
