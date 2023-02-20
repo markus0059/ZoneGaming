@@ -2,6 +2,7 @@
 
 namespace App\DataFixtures;
 
+use App\Entity\Console;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
@@ -27,9 +28,24 @@ class ConsoleFixtures extends Fixture implements DependentFixtureInterface
 
     public function load(ObjectManager $manager): void
     {
-        // $product = new Product();
-        // $manager->persist($product);
+      foreach (self::CONSOLES as $value) {
 
+        $console = new Console();
+        $console->setModel($value[0]);
+        $console->setPhoto($value[1]);
+        $console->setDescription($value[2]);
+        $console->setPriceAllMin($value[3]);
+        $console->setPriceAllMax($value[4]);
+        $console->setPriceWithControllerMin($value[5]);
+        $console->setPriceWithControllerMax($value[6]);
+        $console->setPriceWithCablesMin($value[7]);
+        $console->setPriceWithCablesMax($value[8]);
+        $console->setUniverse($this->getReference($value[9]));
+        $console->setPlateforme($this->getReference($value[10]));
+
+        $manager->persist($console);
+
+      }
         $manager->flush();
     }
 
