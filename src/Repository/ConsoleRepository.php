@@ -3,8 +3,10 @@
 namespace App\Repository;
 
 use App\Entity\Console;
+use App\Entity\Plateforme;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+
 
 /**
  * @extends ServiceEntityRepository<Console>
@@ -38,6 +40,17 @@ class ConsoleRepository extends ServiceEntityRepository
             $this->getEntityManager()->flush();
         }
     }
+
+    public function findAllByPlateforme(Plateforme $plateforme): array
+      {
+        return $this->createQueryBuilder('c')
+        ->andWhere('c.plateforme = :plateforme')
+        ->setParameter('plateforme', $plateforme)
+        ->orderBy('c.id', 'ASC')
+        ->getQuery()
+        ->getResult()
+        ;
+      }
 
 //    /**
 //     * @return Console[] Returns an array of Console objects

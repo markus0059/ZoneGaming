@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Zone Gaming
+{% endblock %}
+
+{% block body %}
+	<main>
+		<div class="cardPlateformeTitle" style="background-image: url(/build/images/{{plateforme.photo}})"></div>
+
+		<section class="cardPlateformes">
+			{% for console in consoles %}
+				<div class="cardPlateformeTitle" style="background-image: url(/build/images/{{console.photo}})"></div>
+				<div>
+					<h2 class="text-center">CONSOLE :
+						{{console.model}}</h2>
+					<p>{{console.description}}</p>
+					<p>Prix Minimum
+						{{console.PriceAllMin}}
+						€ (console sans boite)</p>
+					<p>Prix Maximun
+						{{console.PriceAllMax}}
+						€ (console avec boite)</p>
+				</div>
+				<div>
+					<a class="btn-console" href="">
+						Accessoires
+					</a>
+					<a class="btn-console" href="">
+						Jeux
+					</a>
+				</div>
+			{% endfor %}
+		</section>
+	</main>
+
+
+{% endblock %}

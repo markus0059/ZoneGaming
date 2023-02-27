@@ -10,7 +10,9 @@
 
 		<section class="cardPlateformes">
 			{% for plateforme in plateformes %}
+      <a href="/plateforme/{{plateforme.name}}">
 				<div class="cardPlateforme" style="background-image: url(/build/images/{{plateforme.photo}})"></div>
+      </a>
 
 			{% endfor %}
 		</section>
